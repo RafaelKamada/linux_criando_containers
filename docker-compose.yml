@@ -2,6 +2,7 @@ version: '3.5'
 
 services:
     php:
+        container_name: php
         image: webdevops/php-apache:alpine-php7
         ports:
             - "80:80"
@@ -10,6 +11,7 @@ services:
         links:
             - database
     database:
+        container_name: database
         image: mysql:5.7
         ports:
             - "3306:3036"
